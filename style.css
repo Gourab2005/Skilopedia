@@ -205,7 +205,7 @@ section{
     }
     .services{
         display: block;
-        margin-top:10vh;
+        margin-top:12vh;
     }
     .services .boxcontainer{
         display: grid;
