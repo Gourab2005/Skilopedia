@@ -29,6 +29,17 @@ html{
     scroll-behavior: smooth;
     background-color: rgb(58, 57, 57);
 }
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(3px);
+    transform: translateY(-80%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 section{
     padding: 1rem 3%;
 }
