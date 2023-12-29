@@ -217,7 +217,7 @@ section{
         border-radius: .5rem;
         box-shadow: var(--box-shadow);
         border: var(--border);
-        padding: .5rem;
+        padding: 2rem;
     }
     .services .boxcontainer .box h3{
         color:  black;
@@ -226,4 +226,38 @@ section{
         text-align: center;
     }
     
+}
+
+/* portfoio generator CSS */
+
+.container {
+   margin-top: 11vh;
+   padding: 2rem;
+}
+.container label{
+    font-size: 1.5rem;
+    color: #fff;
+}
+input, select {
+    padding: 8px;
+    margin: 10px;
+    border-radius: 0.5rem;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#codeOutput {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    margin-top: 0;
+    white-space: pre;
+    text-align: left;
 }
