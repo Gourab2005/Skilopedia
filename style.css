@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300&display=swap');
+
+:root{
+    --green:#16a085;
+    --black:#444;
+    --blue: #0000FF;
+    --light-color:#777;
+    --box-shadow: .5rem .5rem  rgba(29, 32, 234, 0.341);
+    --text-shadow: .4rem .4rem 0 rgba(0,0,0, .2);
+    --lg:#eaff06;
+    --border:.2rem solid var(var(--green));
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s ease-out;
+    text-decoration: none;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    background-color: rgb(58, 57, 57);
+}
+section{
+    padding: 1rem 3%;
+}
+.header{
+    padding: 2rem 9%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0.5rem 1.5rem rgba(0,0,0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #242424;
+}
+.header .logo{
+    font-size: 2.5rem;
+    color: var(--black);
+    color: white;
+}
+.header .navbar a{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.7rem;
+    color: var(--light-color);
+    margin-left: 2rem;
+    color: #fff;
+}
+.header .navbar a:hover{
+    color: var(--black);
+    background-color: #f8fc00;
+}
+/* designing navicon */
+#menu-btn{
+    font-size: 3rem;
+    border-radius: .5rem;
+    color:white;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .5rem;
+    padding-left: 1rem;
+    border: 1px solid blue;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--blue);
+    cursor: pointer;
+    font-size: 1.7rem;
+    background-color: #f6f4f4;
+}
+.btn span{
+    padding: .7rem 1rem;
+    border-radius: .5rem;
+    background:var(--blue);
+    color: #fff;
+    margin-left:.5rem;
+}
+.btn:hover{
+    background: var(--blue);
+    color: white;
+}
+.btn:hover span{
+    color:var(--blue);
+    background-color: #f6f4f4;
+}
+.services{
+    display: block;
+    margin-top:15vh;
+}
+.services .boxcontainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+    gap: 8rem;
+}
+.services .boxcontainer .box{
+    background: #fdf633;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    padding: 2.5rem;
+}
+/* .services .boxcontainer .box i{
+    color: var(--blue);
+    font-size: 5rem;
+    padding-bottom: 2rem;
+} */
+.services .boxcontainer .box h3{
+    color:  black;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+.services .boxcontainer .box p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+.heading{
+    text-align: center;
+    padding-top: 12vh;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    text-transform: uppercase;
+    color: white;
+    font-size: 5rem;
+    letter-spacing: .4rem;
+}
+.heading span{
+    text-transform: uppercase;
+    color: yellow;
+}
+
+/* media queries */
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }   
+    .header{
+        padding: 2rem;
+    }
+    .section{
+        padding: 2rem;
+    }
+}
+@media(max-width:768px){
+    #menu-btn{
+        display: initial;    
+    }
+    .header .navbar{
+        position: absolute;
+        top: 115%; right: 2rem;
+        border-radius: .5rem;
+        width: 30rem;
+        border: var(--border);
+        background: #5e5e5e;
+        transform: scale(0);
+        opacity: 0;
+        transform-origin: top right;
+        transition: none;
+    }
+    .header .navbar.active{
+        transform: scale(1);
+        opacity: 1;
+        transition: .4s ease-out;
+    }
+    .header .navbar a{
+        font-size: 2rem;
+        display: block;
+        margin: 2.5rem;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }   
+    .header{
+        padding: 2rem;
+    }
+    .services{
+        display: block;
+        margin-top:12vh;
+    }
+    .services .boxcontainer{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40vw,1fr));
+        gap: 1rem;
+    }
+    .services .boxcontainer .box{
+        background: #fdf633;
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        border: var(--border);
+        padding: .5rem;
+    }
+    .services .boxcontainer .box h3{
+        color:  black;
+        font-size:1.5rem;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+}
